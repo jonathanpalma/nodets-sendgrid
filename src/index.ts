@@ -1,9 +1,7 @@
-import { config } from 'dotenv';
 import express from 'express';
 import cors from 'cors';
+import mailRouter from './routes/mailRouter';
 import versionRouter from './routes/versionRouter';
-
-config();
 
 const app = express();
 const port = process.env.PORT || 8081;
@@ -12,6 +10,7 @@ const port = process.env.PORT || 8081;
 app.use(cors());
 
 // routes
+app.use('/mail', mailRouter);
 app.use('/version', versionRouter);
 
 // server

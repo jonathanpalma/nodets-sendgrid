@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jonathanpalma/nodets-sendgrid#readme",
   "dependencies": {
+    "@sendgrid/mail": "^7.4.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1"
