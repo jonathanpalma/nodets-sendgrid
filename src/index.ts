@@ -8,6 +8,8 @@ const port = process.env.PORT || 8081;
 
 // middlewares
 app.use(cors());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // routes
 app.use('/mail', mailRouter);
